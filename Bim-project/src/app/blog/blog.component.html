@@ -1,3 +1,7 @@
-<p>
-  blog works!
-</p>
+<h1> BLOG </h1>
+
+<ul *ngFor="let items of items">
+	<li>{{items.category}}</li>
+	<li>{{items.Date}}</li>
+	<li>{{items.content}}</li>
+</ul>

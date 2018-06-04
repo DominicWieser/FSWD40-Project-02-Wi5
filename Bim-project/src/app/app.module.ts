@@ -10,6 +10,18 @@ import { CompaniesComponent } from './companies/companies.component';
 import { ServicesComponent } from './services/services.component';
 import { CoursesComponent } from './courses/courses.component';
 
+import { AngularFireModule} from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+export const firebaseConfig ={
+    apiKey: "AIzaSyAKzv39myroOuxaJnE09xSjli7AP7MLmXE",
+    authDomain: "bim-project-713dc.firebaseapp.com",
+    databaseURL: "https://bim-project-713dc.firebaseio.com",
+    projectId: "bim-project-713dc",
+    storageBucket: "bim-project-713dc.appspot.com",
+    messagingSenderId: "143121033937"
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +35,10 @@ import { CoursesComponent } from './courses/courses.component';
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,14 @@
+[
+  {
+    "category": "weekly",
+    "author": "Test",
+    "Date": "YYYY-MM-DD",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur accusantium voluptas a natus, sequi culpa reiciendis deserunt distinctio corporis voluptate laudantium, quod aliquam placeat. Quidem quae ipsum sed delectus quam!"
+  },
+ {
+    "category": "monthly",
+    "author": "Test2",
+    "Date": "YYYY-MM-DD",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur accusantium voluptas a natus, sequi culpa reiciendis deserunt distinctio corporis voluptate laudantium, quod aliquam placeat. Quidem quae ipsum sed delectus quam!"
+  }
+]
