@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<app-hero></app-hero>
+	<div class="container-fluid">
+	<app-blog></app-blog>
+		<div class="container">
+			<app-companies></app-companies>
+			<ul *ngFor="let items of items">
+				<li>{{items.category}}</li>
+				<li>{{items.Date}}</li>
+				<li>{{items.content}}</li>
+			</ul>
+		</div>
+	</div>
+<app-footer></app-footer>
