@@ -1,13 +1,22 @@
 <app-navbar></app-navbar>
 <app-hero></app-hero>
 	<div class="container-fluid">
-	<app-blog></app-blog>
 		<div class="container">
-			<app-companies></app-companies>
-			<!-- <div class="container">
-					<img class="img-circle" src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b6ded683923a678ad03fae323169beb4&auto=format&fit=crop&w=1602&q=80" alt="">
-					<img class="img-circle" src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6de094989d0cf912f189ad8b7322d6d2&auto=format&fit=crop&w=800&q=60" alt="">
-				</div> -->
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<img src="../assets/img/pie-chart.PNG" alt="pie-chart" class="mx-auto d-block img-fluid">
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<p class="text-justify text-lg-right text-md-right font-weight-light align-middle1">Building Information Modeling (<strong>BIM</strong>) ist ein intelligenter, auf 3D-Modellen basierender
+					<strong>software-gestützter Prozess</strong>, der Architekten, Ingenieuren, ausführenden
+					Unternehmen sowie Verwaltern und Facility Management Unternehmen
+					Informationen und <strong>Werkzeuge für die optimierte Planung, Entwurf, Konstruktion,
+					Bewirtschaftung und Verwaltung</strong> von Gebäuden und Infrastruktur bereitstellt.
+					Vorteile von BIM sind:
+					</p>
+				</div>
+			</div>
+			<app-blog></app-blog>
 			<ul *ngFor="let items of items" class="list-unstyled">
 				<div class="blog">
 					<li class="">{{items.Date}}</li>
@@ -17,6 +26,8 @@
 					<li class="line"><hr></li>
 				</div>
 			</ul>
+			<app-companies></app-companies>
+			<!--<app-courses></app-courses>-->
 		</div>
 	</div>
 <app-footer></app-footer>

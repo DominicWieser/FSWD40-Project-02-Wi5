@@ -13,6 +13,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { LoginComponent } from './login/login.component';
 
 export const firebaseConfig ={
     apiKey: "AIzaSyAKzv39myroOuxaJnE09xSjli7AP7MLmXE",
@@ -31,7 +32,8 @@ export const firebaseConfig ={
     BlogComponent,
     CompaniesComponent,
     ServicesComponent,
-    CoursesComponent
+    CoursesComponent,
+    LoginComponent
 
   ],
   imports: [

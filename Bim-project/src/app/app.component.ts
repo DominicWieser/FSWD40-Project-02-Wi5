@@ -36,6 +36,7 @@ export class AppComponent implements OnInit{
 	    this._firebaseService.getItems().subscribe(items => {
 	    	this.items = items;
 	    });
+
 	}
 }
 
@@ -45,4 +46,5 @@ export interface Items {
 	category?: string;
 	author?: string;
 	content?: string;
+	img?: string;
 }

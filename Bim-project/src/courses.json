@@ -1,0 +1,21 @@
+[{
+        "courseName": "BIM Basic",
+        "picture": "http://via.placeholder.com/250x350",
+        "about": "Ausbildung von Konstrukteur_innen in einem 6-wöchigen VollzeitTrainingsprogramm mit anschließenden 2-wöchigen Praktikum",
+        "start": "September 2018",
+        "requirements": "räumliches Vorstellungsvermögen, grundlegende Computerkenntnisse, Lernmotivation, keine Konstruktionskenntnisse",
+        "duration": 6,
+        "jobProspects": "BIM Konstrukteure fehlen der österreichischen Wirtschaft – insbesondere fehlt eine praxisnahe Aus- und Weiterbildung für Konstrukteurinnen und Konstrukteure. Beispielhaft werden in Österreich schon 2018 mehr als zehn mal so viele Abgänger von der Wirtschaft benötigt als bisherige Ausbidlungswege bereitstellen können.",
+        "price": 2500
+    },
+    {
+        "courseName": "BIM Extension",
+        "picture": "http://via.placeholder.com/250x350",
+        "about": "Nisi nulla ut nostrud ipsum veniam excepteur amet sint amet laboris. Eu et tempor eiusmod laborum commodo adipisicing est ipsum quis anim aute. Est dolore ullamco nulla eiusmod do veniam in. Consequat nisi laborum ut mini cupidatat. Ea esse ut magna enim. Amet aliqua amet laborum non non ipsum tempor.",
+        "start": "Sobald genügend Teilnehmer erreicht wurden",
+        "requirements": "räumliches Vorstellungsvermögen, fortgeschrittene Computerkenntnisse, Lernmotivation",
+        "duration": 12,
+        "jobProspects": "BIM Konstrukteure fehlen der österreichischen Wirtschaft – insbesondere fehlt eine praxisnahe Aus- und Weiterbildung für Konstrukteurinnen und Konstrukteure. Beispielhaft werden in Österreich schon 2018 mehr als zehn mal so viele Abgänger von der Wirtschaft benötigt als bisherige Ausbidlungswege bereitstellen können. (Asfinag, Strabag, ...)",
+        "price": 4500
+    }
+]
