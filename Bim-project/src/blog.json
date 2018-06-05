@@ -1,14 +1,16 @@
 [
   {
     "category": "weekly",
-    "author": "Test",
-    "Date": "YYYY-MM-DD",
+    "author": "Harry Blumental",
+    "img": "",
+    "Date": "2018-06-04",
     "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur accusantium voluptas a natus, sequi culpa reiciendis deserunt distinctio corporis voluptate laudantium, quod aliquam placeat. Quidem quae ipsum sed delectus quam!"
   },
  {
     "category": "monthly",
-    "author": "Test2",
-    "Date": "YYYY-MM-DD",
+    "author": "Arnold Mayer",
+    "img": "",
+    "Date": "2018-06-01",
     "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur accusantium voluptas a natus, sequi culpa reiciendis deserunt distinctio corporis voluptate laudantium, quod aliquam placeat. Quidem quae ipsum sed delectus quam!"
   }
 ]
