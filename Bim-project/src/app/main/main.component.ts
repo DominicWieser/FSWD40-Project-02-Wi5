@@ -8,21 +8,18 @@ import { AngularFireAuth} from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
 
-
-import { FirebaseService } from './services/firebase.services';
+import { FirebaseService } from '../services/firebase.services';
 import { OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css'],
   providers: [FirebaseService]
 })
-
-export class AppComponent implements OnInit{
-  title = 'app';
-  items: Items[];
-  appState: string;
+export class MainComponent implements OnInit {
+	items: Items[];
+  	appState: string;
 
   
 	constructor(private _firebaseService: FirebaseService) {
@@ -38,6 +35,7 @@ export class AppComponent implements OnInit{
 	    });
 
 	}
+
 }
 
 export interface Items {

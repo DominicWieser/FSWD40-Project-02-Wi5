@@ -1,0 +1,10 @@
+.card {
+    padding: 20px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 100%, rgba(255, 255, 255, 0.9) 100%),
+     url('https://images.unsplash.com/photo-1506098974556-f3db2a9d2556?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fc47ae7ebacea31d21814c12f6d7f9b8&auto=format&fit=crop&w=2144&q=80');
+
+}
+
+table {
+	overflow: hidden;
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ul *ngFor="let courses of courses" class="list-unstyled">
 
     <div class="card">
@@ -34,3 +35,45 @@
         </table>
     </div>
 </ul>
+=======
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card" *ngFor="let courses of courses">
+		        <h2>{{courses.courseName}}</h2>
+		        <img class="mx-auto d-block img-fluid" src="{{courses.picture}}" alt="pic">
+
+		        <table class="table">
+		            <tbody>
+		                <tr>
+		                    <th><b>Info</b></th>
+		                    <td class="text-left">{{courses.about}}</td>
+		                </tr>
+		                <tr>
+		                    <th><b>Beginn</b></th>
+		                    <td class="text-left">{{courses.start}}</td>
+		                </tr>
+		                <tr>
+		                    <th><b>Fundament</b></th>
+		                    <td class="text-left">{{courses.requirements}}</td>
+		                </tr>
+		                <tr>
+		                    <th><b>Dauer</b></th>
+		                    <td class="text-left">{{courses.duration}} Wochen</td>
+		                </tr>
+		                <tr>
+		                    <th><b>Zukunft</b></th>
+		                    <td class="text-left">{{courses.jobProspects}}</td>
+		                </tr>
+		                <tr>
+		                    <th><b>Kosten</b></th>
+		                    <td class="text-left">{{courses.price}} &euro; inkl. USt.</td>
+		                </tr>
+		            </tbody>
+		        </table>
+		    </div>
+		</div>
+	</div>
+</div>
+    
+>>>>>>> e883b09228cab17ce50df0812959d57d10594595

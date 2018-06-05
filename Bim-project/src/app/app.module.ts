@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -13,6 +13,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { LoginComponent } from './login/login.component';
+import { MainComponent } from './main/main.component';
 
 export const firebaseConfig ={
     apiKey: "AIzaSyAKzv39myroOuxaJnE09xSjli7AP7MLmXE",
@@ -22,6 +24,21 @@ export const firebaseConfig ={
     storageBucket: "bim-project-713dc.appspot.com",
     messagingSenderId: "143121033937"
 };
+
+const appRoutes: Routes = [
+{
+  path: '', component: MainComponent
+},
+{
+  path: 'why', component: ServicesComponent
+},
+{
+  path: 'courses', component: CoursesComponent
+},
+{
+  path: 'login', component: LoginComponent
+}
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,14 +48,17 @@ export const firebaseConfig ={
     BlogComponent,
     CompaniesComponent,
     ServicesComponent,
-    CoursesComponent
+    CoursesComponent,
+    LoginComponent,
+    MainComponent
 
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    AngularFireDatabaseModule 
+    AngularFireDatabaseModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
