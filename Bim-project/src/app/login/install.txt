@@ -1,0 +1,9 @@
+Here is the simplest step-by-step install and using example (working in nativescript/typescript/angular project):
+
+npm install crypto-js
+then:
+
+npm install --save @types/crypto-js
+Import in some component:
+
+import * as crypto from "crypto-js";

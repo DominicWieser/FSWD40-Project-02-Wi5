@@ -1,3 +1,25 @@
-<p>
-  login works!
-</p>
+<div id="selection">
+	<button (click)="registerForm()">Register</button>
+	<button (click)="loginForm()">Login</button>
+</div>
+
+<div *ngIf="form == 'register'" id="registering">
+<h2>Register</h2>
+
+<p><input type="text" placeholder="username" #regUserName/></p>
+<p><input type="text" placeholder="password" #regPassword/></p>
+<input type="text" placeholder="retype password" #regRePassword/>
+
+<button (click)="checkRegistering(regUserName.value,regPassword.value,regRePassword.value)">submit</button>
+</div>
+
+<div *ngIf="form == 'login'" id="logintemplate">
+<h2>Login </h2>	
+  <p><input type="text" placeholder="username" #logUserName/></p>
+  <p><input type="text" placeholder="password" #logPassword/></p>
+  <p><button (click)="checkLogin(logUserName.value,logPassword.value)">submit</button></p>
+  <a href="#" onclick="alert('your password has been send to you by e-mail');">forgot password </a>	
+</div>	
+
+
+
