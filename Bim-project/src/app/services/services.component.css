@@ -1,0 +1,11 @@
+/* .row div{
+    border: 1px solid black;
+} */
+.chartImg{
+    width: 100%;
+}
+.why{
+    line-height: 3em;
+    padding: 20px;     
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 100%, rgba(255, 255, 255, 0.9) 100%), url(https://images.unsplash.com/photo-1486927181919-3ac1fc3a8082?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e073e351e1acc46e05a1b6d748724bdd&auto=format&fit=crop&w=1400&q=60);
+}
