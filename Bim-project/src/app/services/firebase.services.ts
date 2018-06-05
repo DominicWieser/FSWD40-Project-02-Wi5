@@ -5,6 +5,7 @@ import 'rxjs/add/operator/map';
 export class FirebaseService{
   items: FirebaseListObservable<Items[]>;
   courses: FirebaseListObservable<Courses[]>;
+login: FirebaseListObservable<Login[]>;
 
   constructor(private af: AngularFireDatabase) {
     
@@ -18,6 +19,14 @@ export class FirebaseService{
   getCourses() {
       this.courses= this.af.list('/courses') as FirebaseListObservable<Courses[]>;
       return this.courses;
+  }
+   addUser(newUser) {
+      return this.login.push(newUser);
+  }
+
+  getLogin(){
+   this.login= this.af.list('/login') as FirebaseListObservable<Login[]>;
+   return this.login;
   }
 
 }
@@ -41,4 +50,11 @@ export interface Courses {
   price?: number;
   requirements?: string;
   start?: string;
+}
+
+export interface Login{
+ $key?: string;
+ username?: string;
+ password?: string;
+
 }
