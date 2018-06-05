@@ -1,0 +1,11 @@
+div {margin-top: 2em;
+     margin-left: 5em;
+
+    }
+
+#selection{
+  //position: fixed;
+  //right: 5em;
+  margin-top: 1em;	
+  float: right;
+}    
