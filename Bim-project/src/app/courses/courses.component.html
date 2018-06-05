@@ -1,3 +1,9 @@
-<p>
-  courses works!
-</p>
+<ul *ngFor="let courses of courses" class="list-unstyled">
+	<div class="courses">
+		<li class="">{{courses.courseName}}</li>
+		<li>{{courses.about}}</li>
+		<li><em>{{courses.duration}}</em></li>
+		<li ><span class="categoryBlog">{{courses.price}}</span></li>
+		<li class="line"><hr></li>
+	</div>
+</ul>
