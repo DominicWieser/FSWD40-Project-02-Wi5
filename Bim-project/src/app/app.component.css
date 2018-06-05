@@ -1,11 +1,23 @@
 .categoryBlog{
     border: 1px solid #999;
     padding: 10px;
-    float: right;
-    margin-bottom: 25px;
+    margin-top: 15px;
     background-color: #2E74B5;
     color: #eee;
 }
+.blog{
+    border-bottom: 2px solid #999;
+    padding: 55px;
+}
+.blogInnerContainer{
+    margin-bottom: 10px;
+}
+.imgContainer{
+    width: 120px;
+    float: right;
+    padding-left: 10px;
+}
+
 /* .categoryBlog:hover {
     color: #2E74B5;
     background-color: #eee; 
