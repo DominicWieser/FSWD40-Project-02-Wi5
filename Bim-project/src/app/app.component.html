@@ -3,11 +3,15 @@
 	<div class="container-fluid">
 	<app-blog></app-blog>
 		<div class="container">
-			<app-companies></app-companies>
-			<ul *ngFor="let items of items">
-				<li>{{items.category}}</li>
-				<li>{{items.Date}}</li>
-				<li>{{items.content}}</li>
+			<app-companies></app-companies>			
+			<ul *ngFor="let items of items" class="list-unstyled">
+				<div class="blog">
+					<li class="">{{items.Date}}</li>
+					<li>{{items.content}}</li>
+					<li><em>{{items.author}}</em></li>
+					<li ><span class="categoryBlog">{{items.category}}</span></li>
+					<li class="line"><hr></li>
+				</div>
 			</ul>
 		</div>
 	</div>
