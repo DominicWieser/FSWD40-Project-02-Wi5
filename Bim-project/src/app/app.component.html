@@ -4,10 +4,18 @@
 	<app-blog></app-blog>
 		<div class="container">
 			<app-companies></app-companies>
-			<ul *ngFor="let items of items">
-				<li>{{items.category}}</li>
-				<li>{{items.Date}}</li>
-				<li>{{items.content}}</li>
+			<!-- <div class="container">
+					<img class="img-circle" src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b6ded683923a678ad03fae323169beb4&auto=format&fit=crop&w=1602&q=80" alt="">
+					<img class="img-circle" src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6de094989d0cf912f189ad8b7322d6d2&auto=format&fit=crop&w=800&q=60" alt="">
+				</div> -->
+			<ul *ngFor="let items of items" class="list-unstyled">
+				<div class="blog">
+					<li class="">{{items.Date}}</li>
+					<li>{{items.content}}</li>
+					<li><em>{{items.author}}</em></li>
+					<li ><span class="categoryBlog">{{items.category}}</span></li>
+					<li class="line"><hr></li>
+				</div>
 			</ul>
 		</div>
 	</div>
