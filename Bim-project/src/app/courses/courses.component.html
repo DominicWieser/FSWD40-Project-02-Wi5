@@ -1,3 +1,13 @@
-<p>
-  courses works!
-</p>
+<h1>Kursübersicht</h1>
+<div *ngFor="let course of courses">
+    <div class="card">
+        <p><b>Kursname: </b>{{courses.courseName}}</p>
+        <img src="{{courses.picture}}" alt="user pic">
+        <p><b>Info: </b>{{courses.about}}</p>
+        <p><b>Beginn: </b>{{courses.start}}<br></p>
+        <p><b>Voraussetzungen: </b>{{courses.requirements}}</p>
+        <p><b>Dauer: </b></b>{{courses.duration}} weeks</p>
+        <p><b>Jobaussichten: </b>{{courses.jobProspects}}</p>
+        <p><b>Kosten: </b>{{courses.price}} €</p>
+    </div>
+</div>
