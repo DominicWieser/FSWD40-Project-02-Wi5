@@ -1,9 +1,40 @@
-<ul *ngFor="let courses of courses" class="list-unstyled">
-	<div class="courses">
-		<li class="">{{courses.courseName}}</li>
-		<li>{{courses.about}}</li>
-		<li><em>{{courses.duration}}</em></li>
-		<li ><span class="categoryBlog">{{courses.price}}</span></li>
-		<li class="line"><hr></li>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="card" *ngFor="let courses of courses">
+		        <h2>{{courses.courseName}}</h2>
+		        <img class="mx-auto d-block img-fluid" src="{{courses.picture}}" alt="pic">
+
+		        <table class="table">
+		            <tbody>
+		                <tr>
+		                    <th><b>Info</b></th>
+		                    <td class="text-left">{{courses.about}}</td>
+		                </tr>
+		                <tr>
+		                    <th><b>Beginn</b></th>
+		                    <td class="text-left">{{courses.start}}</td>
+		                </tr>
+		                <tr>
+		                    <th><b>Fundament</b></th>
+		                    <td class="text-left">{{courses.requirements}}</td>
+		                </tr>
+		                <tr>
+		                    <th><b>Dauer</b></th>
+		                    <td class="text-left">{{courses.duration}} Wochen</td>
+		                </tr>
+		                <tr>
+		                    <th><b>Zukunft</b></th>
+		                    <td class="text-left">{{courses.jobProspects}}</td>
+		                </tr>
+		                <tr>
+		                    <th><b>Kosten</b></th>
+		                    <td class="text-left">{{courses.price}} &euro; inkl. USt.</td>
+		                </tr>
+		            </tbody>
+		        </table>
+		    </div>
+		</div>
 	</div>
-</ul>
+</div>
+    

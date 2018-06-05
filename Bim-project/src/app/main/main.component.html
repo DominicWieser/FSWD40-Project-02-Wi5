@@ -1,0 +1,51 @@
+<app-hero></app-hero>
+<div class="container-fluid">
+	<div class="container">
+		
+		<h2>Was ist BIM? </h2>
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<img src="../assets/img/pie-chart.PNG" alt="pie-chart" class="mx-auto d-block img-fluid">
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<p class="text-justify text-lg-right text-md-right font-weight-light align-middle1">Building Information Modeling (<strong>BIM</strong>) ist ein intelligenter, auf 3D-Modellen basierender
+				<strong>software-gestützter Prozess</strong>, der Architekten, Ingenieuren, ausführenden
+				Unternehmen sowie Verwaltern und Facility Management Unternehmen
+				Informationen und <strong>Werkzeuge für die optimierte Planung, Entwurf, Konstruktion,
+				Bewirtschaftung und Verwaltung</strong> von Gebäuden und Infrastruktur bereitstellt.
+				Vorteile von BIM sind:
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<p class="text-justify fix">Durch den verbesserten Datenabgleich wird die Produktivität des Planungsprozesses
+				hinsichtlich Kosten, Terminen und Qualität gesteigert. Ab 2020 ist BIM in
+				Deutschland für alle neu zu planenden Projekte des infrastrukturbezogenen
+				Hochbaus verpflichtend; es ist zu erwarten, dass Österreich hier bald nachziehen
+				wird.
+				Auch ist die BIM Technologie die Grundlage für viele neue Geschäftsmodelle
+				denen schon kurzfristig weltweit millardenschweres Wachstum prognostiziert wird.</p>
+			</div>
+		</div>
+		<ul *ngFor="let items of items" class="list-unstyled">
+            <div class="blog">
+                <div class="blogInnerContainer">
+                        <li><div class="imgContainer"><img src="{{items.img}}" class="mx-auto d-block img-fluid" alt=""></div></li>
+                        <li><h3>{{items.headline}}</h3></li>
+                        <li class="">{{items.Date}}</li>
+                        <li>{{items.content}}</li>
+                        <li ><em>{{items.author}}</em></li>
+
+                </div>
+                <li ><span class="categoryBlog">{{items.category}}</span></li>
+
+            </div>
+        </ul>
+	<app-companies></app-companies>
+		<!--<app-courses></app-courses>-->
+	</div>
+</div>
+
+	
+
