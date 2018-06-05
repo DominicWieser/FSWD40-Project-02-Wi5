@@ -1,13 +1,36 @@
-<h1>Kursübersicht</h1>
-<div *ngFor="let course of courses">
+<ul *ngFor="let courses of courses" class="list-unstyled">
+
     <div class="card">
-        <p><b>Kursname: </b>{{courses.courseName}}</p>
-        <img src="{{courses.picture}}" alt="user pic">
-        <p><b>Info: </b>{{courses.about}}</p>
-        <p><b>Beginn: </b>{{courses.start}}<br></p>
-        <p><b>Voraussetzungen: </b>{{courses.requirements}}</p>
-        <p><b>Dauer: </b></b>{{courses.duration}} weeks</p>
-        <p><b>Jobaussichten: </b>{{courses.jobProspects}}</p>
-        <p><b>Kosten: </b>{{courses.price}} €</p>
+        <h2>{{courses.courseName}}</h2>
+        <img class="mx-auto d-block img-fluid" src="{{courses.picture}}" alt="pic">
+
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th><b>Info</b></th>
+                    <td>{{courses.about}}</td>
+                </tr>
+                <tr>
+                    <th><b>Beginn</b></th>
+                    <td>{{courses.start}}</td>
+                </tr>
+                <tr>
+                    <th><b>Voraussetzungen</b></th>
+                    <td>{{courses.requirements}}</td>
+                </tr>
+                <tr>
+                    <th><b>Dauer</b></th>
+                    <td>{{courses.duration}}</td>
+                </tr>
+                <tr>
+                    <th><b>Jobaussichten</b></th>
+                    <td>{{courses.jobProspects}}</td>
+                </tr>
+                <tr>
+                    <th><b>Kosten</b></th>
+                    <td>{{courses.price}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-</div>
+</ul>
