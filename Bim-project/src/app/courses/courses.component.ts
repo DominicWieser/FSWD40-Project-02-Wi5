@@ -22,17 +22,47 @@ import { OnInit } from '@angular/core';
 export class CoursesComponent implements OnInit {
   courses: Courses[];
   appState: string;
+  username: string;
+  login: boolean;
+  show: string[];
+  showIt: boolean;
 
-  	constructor(private _firebaseService: FirebaseService) {
-	}
+    constructor(private _firebaseService: FirebaseService) {
+  }
 
   ngOnInit() {
-  	this.appState = 'default';
-	
-	this._firebaseService.getCourses().subscribe(courses => {
-	    this.courses = courses;
-	});
+    this.appState = 'default';
+  
+      this._firebaseService.getCourses().subscribe(courses => {
+        this.courses = courses;
+      });
+    let logindata=this.getLogin();
+    this.username=logindata.username;
+    this.login=logindata.login;
+    let s=[];
+    this.courses.map(function(x){s.push('false');});
+    this.show=JSON.parse(JSON.stringify(s));  
+    this.showIt=false;
   }
+
+  getLogin(){
+   let log=document.getElementById('logindata').textContent;
+   return JSON.parse(log);
+  }
+
+  bookCourse(courseId){
+   
+   if(this.login==false)
+    {alert('please login first');}
+   else
+    {this.showIt=true;
+     let Id=courseId.toString();
+     let data={"username": this.username, "login": this.login, "courseId": Id};
+     document.getElementById('logindata').textContent = JSON.stringify(data);
+   }
+
+  }
+
 
 }
 
@@ -47,4 +77,3 @@ export interface Courses {
   requirements?: string;
   start?: string;
 }
-

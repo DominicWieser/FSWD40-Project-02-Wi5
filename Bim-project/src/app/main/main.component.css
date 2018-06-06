@@ -31,3 +31,7 @@
 .align-middle1 {
     padding-top: 50px;
 }
+
+#login-data {
+    display: none;
+}

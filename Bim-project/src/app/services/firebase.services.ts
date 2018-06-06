@@ -5,14 +5,29 @@ import 'rxjs/add/operator/map';
 export class FirebaseService{
   items: FirebaseListObservable<Items[]>;
   courses: FirebaseListObservable<Courses[]>;
-login: FirebaseListObservable<Login[]>;
+  login: FirebaseListObservable<Login[]>;
+  category: FirebaseListObservable<Category[]>;
 
   constructor(private af: AngularFireDatabase) {
     
   }
 
-  getItems() {
-      this.items= this.af.list('/items') as FirebaseListObservable<Items[]>;
+  getItems (category: string = null) {
+      /* for all output in select */
+      if (category == 'all') {
+            this.items = this.af.list('/items') as FirebaseListObservable<Items[]>;
+        }
+      /* For Gender Selection */
+      else if (category != null) {
+          this.items = this.af.list('/items', {
+              query: {
+                  orderByChild: 'category',
+                  equalTo: category
+              }
+          }) as FirebaseListObservable<Items[]>;
+      } else {
+          this.items= this.af.list('/items') as FirebaseListObservable<Items[]>;
+      }
       return this.items;
   }
 
@@ -20,13 +35,19 @@ login: FirebaseListObservable<Login[]>;
       this.courses= this.af.list('/courses') as FirebaseListObservable<Courses[]>;
       return this.courses;
   }
-   addUser(newUser) {
+
+  addUser(newUser) {
       return this.login.push(newUser);
   }
 
   getLogin(){
    this.login= this.af.list('/login') as FirebaseListObservable<Login[]>;
    return this.login;
+  }
+
+  getCategory(){
+    this.category = this.af.list('/category') as FirebaseListObservable<Category[]>;
+      return this.category;
   }
 
 }
@@ -56,5 +77,9 @@ export interface Login{
  $key?: string;
  username?: string;
  password?: string;
+}
 
+export interface Category {
+  $key?: string;
+  category?: string;
 }
