@@ -23,7 +23,7 @@ import * as crypto from "crypto-js";
 export class LoginComponent implements OnInit {
 
   login: Login[];
-  appState: string;	
+  appState: string; 
   form: string;
 
   constructor(private _firebaseService: FirebaseService) { 
@@ -31,20 +31,20 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-  	this.appState = 'default';
+    this.appState = 'default';
  
 
-	    this._firebaseService.getLogin().subscribe(login => {
-	    	this.login = login;
-	    });
+      this._firebaseService.getLogin().subscribe(login => {
+        this.login = login;
+      });
   }    
 
   checkRegistering(username,password,repassword){
     //alert(username+" "+password+" "+repassword);
     let userExists=this.login.reduce(function(x=false,u){
-   	                                    if(u.username==username){x=true;}
+                                        if(u.username==username){x=true;}
                                         return x; 
-   	                                   });
+                                       });
     if(userExists===true){alert('error: user already exists');}
     if(password!=repassword){alert("passwords are not identical");}
     if(userExists&&(password==repassword))
@@ -58,9 +58,9 @@ export class LoginComponent implements OnInit {
   checkLogin(username,password){
    
    let userExists=this.login.reduce(function(x=false,u){
-   	                                    if(u.username==username){x=true;}
+                                        if(u.username==username){x=true;}
                                         return x; 
-   	                                   }); 
+                                       }); 
    let hashed=crypto.SHA256(password).toString(crypto.enc.Hex);
    let userPassword=this.login.reduce(function(x="none",u){if((u.username==username)&&(u.password==hashed))
                                                             {x=u.password;}
@@ -69,8 +69,14 @@ export class LoginComponent implements OnInit {
    
    if(userExists!==true)//{alert("you logged in");}
     {alert("please register first");}
-   if(hashed==userPassword){alert('you successfully logged in');}
-   else{alert('wrong password or username');}
+   if(hashed==userPassword){alert('you successfully logged in');
+                            let log={"username": username , "login": true}; 
+                            document.getElementById('logindata').textContent=JSON.stringify(log);
+                           }
+   else{alert('wrong password or username');
+        let log={"username": username , "login": false}; 
+        document.getElementById('logindata').textContent=JSON.stringify(log);
+       }
    this.form='none';
   }
 
@@ -92,4 +98,3 @@ export interface Login{
  username?: string; 
  password?: string;
 }
-

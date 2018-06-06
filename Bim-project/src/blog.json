@@ -6,11 +6,39 @@
     "Date": "2018-06-04",
     "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur accusantium voluptas a natus, sequi culpa reiciendis deserunt distinctio corporis voluptate laudantium, quod aliquam placeat. Quidem quae ipsum sed delectus quam!"
   },
+  {
+    "category": "weekly",
+    "author": "Erwin West",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvcOLHAwG03XZ8VWeOtVphHXQFd4-PP7ybiPpxcUBV7Z36aoZa",
+    "Date": "2018-05-08",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur accusantium voluptas a natus, sequi culpa reiciendis deserunt distinctio corporis voluptate laudantium, quod aliquam placeat. Quidem quae ipsum sed delectus quam!"
+  },
+  {
+    "category": "weekly",
+    "author": "Jan Hartwig",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB6m1IbSlROYIMZhazHaJFhGQUX2zYQp1H8sxxH2P9tRDjXen9Eg",
+    "Date": "2018-05-01",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur accusantium voluptas a natus, sequi culpa reiciendis deserunt distinctio corporis voluptate laudantium, quod aliquam placeat. Quidem quae ipsum sed delectus quam!"
+  },
  {
     "category": "monthly",
-    "author": "Arnold Mayer",
-    "img": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6de094989d0cf912f189ad8b7322d6d2&auto=format&fit=crop&w=800&q=60",
-    "Date": "2018-06-01",
+    "author": "Peter Mayer",
+    "img": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350",
+    "Date": "2018-03-01",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur accusantium voluptas a natus, sequi culpa reiciendis deserunt distinctio corporis voluptate laudantium, quod aliquam placeat. Quidem quae ipsum sed delectus quam!"
+  },
+  {
+    "category": "monthly",
+    "author": "Joachim Schulz",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoOQHBiptnNV1WkDliBzps1e2gplJJCZVX1e0No6n_vSKBgM05",
+    "Date": "2018-02-01",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur accusantium voluptas a natus, sequi culpa reiciendis deserunt distinctio corporis voluptate laudantium, quod aliquam placeat. Quidem quae ipsum sed delectus quam!"
+  },
+  {
+    "category": "monthly",
+    "author": "Stuart Little",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi7YAzyd3g4mRi48Tri9bZZMxxpLuY9cgAj2Tbouvb65dTZHpVBw",
+    "Date": "2018-01-01",
     "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur accusantium voluptas a natus, sequi culpa reiciendis deserunt distinctio corporis voluptate laudantium, quod aliquam placeat. Quidem quae ipsum sed delectus quam!"
   }
 ]

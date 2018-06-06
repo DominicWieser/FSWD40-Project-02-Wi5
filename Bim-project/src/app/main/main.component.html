@@ -28,22 +28,37 @@
 				denen schon kurzfristig weltweit millardenschweres Wachstum prognostiziert wird.</p>
 			</div>
 		</div>
-		<ul *ngFor="let items of items" class="list-unstyled">
-            <div class="blog">
-                <div class="blogInnerContainer">
-                        <li><div class="imgContainer"><img src="{{items.img}}" class="mx-auto d-block img-fluid" alt=""></div></li>
-                        <li><h3>{{items.headline}}</h3></li>
-                        <li class="">{{items.Date}}</li>
-                        <li>{{items.content}}</li>
-                        <li ><em>{{items.author}}</em></li>
-
-                </div>
-                <li ><span class="categoryBlog">{{items.category}}</span></li>
-
-            </div>
-        </ul>
+		<div class="row line" *ngIf="appState == 'default'">
+			<div class="col-lg-12">
+				<label>Filter Category
+			        <select (change)="filterCategory(filteredCategory.value)" class="custom-select" #filteredCategory>
+			            <option value="all">All</option>
+			            <option *ngFor="let category of category" value="{{category.category}}">
+			                {{category.category}}
+			            </option>
+			        </select>
+			    </label>
+			</div>
+		</div>
+				<ul  *ngFor="let items of items" class="list-unstyled">
+		            <div class="blog">
+		                <div class="blogInnerContainer">
+		                        <li><div class="imgContainer"><img src="{{items.img}}" class="mx-auto d-block img-fluid" alt=""></div></li>
+		                        <li><h3>{{items.headline}}</h3></li>
+		                        <li class="">{{items.Date}}</li>
+		                        <li>{{items.content}}</li>
+		                        <li ><em>{{items.author}}</em></li>
+		                </div>
+		                <li ><span class="categoryBlog">{{items.category}}</span></li>
+		            </div>
+		        </ul>
+			
+		
 	<app-companies></app-companies>
 		<!--<app-courses></app-courses>-->
+	</div>
+	<div id="login-data">
+	
 	</div>
 </div>
 

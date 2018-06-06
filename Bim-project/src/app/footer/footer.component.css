@@ -1,8 +1,4 @@
-/* footer {
-	text-align: center;
-} */
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900%27');
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -61,4 +57,18 @@ footer {
 
 img {
     height: 3em;
+    <<<<<<< HEAD
 }
+
+=======
+}
+.white,
+.white>a {
+    padding-top: 10px;
+    color: #fff;
+}
+.blue {
+    background-color: #294D9F;
+    padding: 10px 0;
+}
+>>>>>>>c87d401dc017416b405fb692d87a2d4043145a2a
