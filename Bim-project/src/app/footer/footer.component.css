@@ -57,18 +57,15 @@ footer {
 
 img {
     height: 3em;
-    <<<<<<< HEAD
 }
 
-=======
-}
 .white,
 .white>a {
     padding-top: 10px;
     color: #fff;
 }
+
 .blue {
     background-color: #294D9F;
     padding: 10px 0;
 }
->>>>>>>c87d401dc017416b405fb692d87a2d4043145a2a
