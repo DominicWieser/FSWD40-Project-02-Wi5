@@ -69,8 +69,14 @@ export class LoginComponent implements OnInit {
    
    if(userExists!==true)//{alert("you logged in");}
     {alert("please register first");}
-   if(hashed==userPassword){alert('you successfully logged in');}
-   else{alert('wrong password or username');}
+   if(hashed==userPassword){alert('you successfully logged in');
+                            let log={"username": username , "login": true}; 
+                            document.getElementById('logindata').textContent=JSON.stringify(log);
+                           }
+   else{alert('wrong password or username');
+        let log={"username": username , "login": false}; 
+        document.getElementById('logindata').textContent=JSON.stringify(log);
+       }
    this.form='none';
   }
 
