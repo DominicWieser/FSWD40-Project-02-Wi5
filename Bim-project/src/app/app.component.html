@@ -1,4 +1,44 @@
 
 <app-navbar></app-navbar>
+<<<<<<< HEAD
+<app-hero></app-hero>
+	<div class="container-fluid">
+		<div class="container">
+			<app-services></app-services>
+			
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<img src="../assets/img/pie-chart.PNG" alt="pie-chart" class="mx-auto d-block img-fluid">
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<p class="text-justify text-lg-right text-md-right font-weight-light align-middle1">Building Information Modeling (<strong>BIM</strong>) ist ein intelligenter, auf 3D-Modellen basierender
+					<strong>software-gestützter Prozess</strong>, der Architekten, Ingenieuren, ausführenden
+					Unternehmen sowie Verwaltern und Facility Management Unternehmen
+					Informationen und <strong>Werkzeuge für die optimierte Planung, Entwurf, Konstruktion,
+					Bewirtschaftung und Verwaltung</strong> von Gebäuden und Infrastruktur bereitstellt.
+					Vorteile von BIM sind:
+					</p>
+				</div>
+			</div>
+			<ul *ngFor="let items of items" class="list-unstyled">
+				<div class="blog">
+					<div class="blogInnerContainer">
+							<li><div class="imgContainer"><img src="{{items.img}}" class="mx-auto d-block img-fluid" alt=""></div></li>
+							<li><h3>{{items.headline}}</h3></li>
+							<li class="">{{items.Date}}</li>
+							<li>{{items.content}}</li>
+							<li ><em>{{items.author}}</em></li>
+							
+					</div>
+					<li ><span class="categoryBlog">{{items.category}}</span></li>
+					
+				</div>
+			</ul>
+			<app-companies></app-companies>
+			<!--<app-courses></app-courses>-->
+		</div>
+	</div>
+=======
 <router-outlet></router-outlet>
+>>>>>>> 53ebe16ebba4f7327f20d98ff1b20487e4218268
 <app-footer></app-footer>
