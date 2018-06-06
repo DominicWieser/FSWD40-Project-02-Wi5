@@ -15,6 +15,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+import { TeamComponent } from './team/team.component';
 
 export const firebaseConfig ={
     apiKey: "AIzaSyAKzv39myroOuxaJnE09xSjli7AP7MLmXE",
@@ -37,6 +38,9 @@ const appRoutes: Routes = [
 },
 {
   path: 'login', component: LoginComponent
+},
+{
+  path: 'team', component: TeamComponent
 }
 ]
 @NgModule({
@@ -50,7 +54,8 @@ const appRoutes: Routes = [
     ServicesComponent,
     CoursesComponent,
     LoginComponent,
-    MainComponent
+    MainComponent,
+    TeamComponent
 
   ],
   imports: [
