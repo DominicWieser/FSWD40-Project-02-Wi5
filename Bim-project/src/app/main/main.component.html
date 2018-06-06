@@ -31,8 +31,8 @@
 		<div class="row line" *ngIf="appState == 'default'">
 			<div class="col-lg-12">
 				<label>Filter Category
-			        <select (change)="filterCategory(filteredCategory.value)" #filteredCategory>
-			            <option value="0">Select</option>
+			        <select (change)="filterCategory(filteredCategory.value)" class="custom-select" #filteredCategory>
+			            <option value="all">All</option>
 			            <option *ngFor="let category of category" value="{{category.category}}">
 			                {{category.category}}
 			            </option>
@@ -56,6 +56,9 @@
 		
 	<app-companies></app-companies>
 		<!--<app-courses></app-courses>-->
+	</div>
+	<div id="login-data">
+	
 	</div>
 </div>
 

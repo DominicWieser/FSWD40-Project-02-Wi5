@@ -19,6 +19,7 @@ import { OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 	items: Items[];
+	category: Category[];
   	appState: string;
 
   
@@ -34,8 +35,16 @@ export class MainComponent implements OnInit {
 	    	this.items = items;
 	    });
 
+	    this._firebaseService.getCategory().subscribe(category => {
+			this.category = category;
+		});
 	}
 
+	filterCategory(category) {
+	  this._firebaseService.getItems(category).subscribe(items=> {
+	    this.items = items;
+	  })
+	}
 }
 
 export interface Items {
@@ -45,4 +54,9 @@ export interface Items {
 	author?: string;
 	content?: string;
 	img?: string;
+}
+
+export interface Category {
+  $key?: string;
+  category?: string;
 }

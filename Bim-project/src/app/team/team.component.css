@@ -1,0 +1,146 @@
+
+.row{
+    color: #333;
+}
+.team-heading{
+  margin-top: 30px;
+    font-size: 3em;
+    text-shadow: 1px 1px 1px grey;
+}
+.jumbotron{
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 100%, rgba(255, 255, 255, 0.3) 100%),
+    url('https://images.unsplash.com/photo-1523265642686-c2b105eb146e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=12a50ff039f20e3f388af8ef554d3655&auto=format&fit=crop&w=800&q=60');
+    background-repeat: no-repeat;
+    height: 350px;
+    background-size: cover;
+    background-position: center center;
+}
+.team-subHeading{
+    margin-top: 25px;
+    text-shadow: 1px 1px 1px grey;
+}
+.team-text{
+    line-height: 2.5em;
+}
+/* Transition---------------------------------------------------- */
+ @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.snip0028 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 350px;
+  max-width: 310px;
+  max-height: 400px;
+  width: 100%;
+  background: #000000;
+}
+figure.snip0028 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0028 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip0028 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+figure.snip0028 figcaption > div {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  left: 100%;
+  padding: 7px 10px;
+  border-radius: 0 0 0 5px;
+  -webkit-transition: left 0.35s;
+  transition: left 0.35s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+figure.snip0028 figcaption > div a {
+    padding-top: 15px;
+    color: #333;
+    text-decoration: none;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+figure.snip0028 figcaption > div a:hover {
+  opacity: 1;
+  cursor: default;
+}
+figure.snip0028 figcaption::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  background-image: linear-gradient(to top, #000000 0%, transparent 50%, #000000 100%);
+}
+figure.snip0028 h2 {
+  border-radius: 0 5px 0 0;
+  text-align: right;
+  margin: 0;
+  padding: 20px;
+  position: absolute;
+  font-size: 1em;
+  bottom: 70px;
+  right: 100%;
+  width: 90%;
+  word-spacing: -0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color: #000000;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  cursor: default;
+}
+figure.snip0028 h2 span {
+  font-weight: 800;
+}
+figure.snip0028:hover img,
+figure.snip0028.hover img {
+  opacity: 0.7;
+}
+figure.snip0028:hover figcaption > div,
+figure.snip0028.hover figcaption > div {
+  left: 35%;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+figure.snip0028:hover figcaption h2,
+figure.snip0028.hover figcaption h2 {
+  right: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0028:hover figcaption::before,
+figure.snip0028.hover figcaption::before {
+  opacity: 0.8;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  cursor: default;
+}

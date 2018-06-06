@@ -58,3 +58,15 @@ footer {
 img {
     height: 3em;
 }
+
+.white,
+.white > a {
+    padding-top: 10px;
+    color: #fff;
+}
+
+.blue {
+    background-color: #294D9F;
+    padding: 10px 0;
+}
+
