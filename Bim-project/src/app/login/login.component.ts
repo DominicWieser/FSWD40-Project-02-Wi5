@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+/*
+  IMPORTING FIREBASE
+*/
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule} from 'angularfire2/database';
 
@@ -11,8 +14,11 @@ import * as firebase from 'firebase/app';
 
 import { FirebaseService } from '../services/firebase.services';
 import { OnInit } from '@angular/core';
-import * as crypto from "crypto-js";
 
+/*
+  IMPORTING CRYPTO.JS
+*/
+import * as crypto from "crypto-js";
 
 @Component({
   selector: 'app-login',
@@ -20,47 +26,55 @@ import * as crypto from "crypto-js";
   styleUrls: ['./login.component.css'],
   providers: [FirebaseService]
 })
-export class LoginComponent implements OnInit {
 
+export class LoginComponent implements OnInit {
+/*
+  VARIABLES
+*/
   login: Login[];
   appState: string; 
   form: string;
 
+/*
+  CONSTRUCTOR
+*/
   constructor(private _firebaseService: FirebaseService) { 
-   this.form="none";
+    this.form="none";
   }
 
   ngOnInit() {
     this.appState = 'default';
- 
 
-      this._firebaseService.getLogin().subscribe(login => {
-        this.login = login;
-      });
+    this._firebaseService.getLogin().subscribe(login => {
+      this.login = login;
+    });
+
   }    
 
   checkRegistering(username,password,repassword){
     //alert(username+" "+password+" "+repassword);
     let userExists=this.login.reduce(function(x=false,u){
-                                        if(u.username==username){x=true;}
-                                        return x; 
-                                       });
-    if(userExists===true){alert('error: user already exists');}
-    if(password!=repassword){alert("passwords are not identical");}
-    if(userExists&&(password==repassword))
-      {let hashed=crypto.SHA256(password).toString(crypto.enc.Hex);
-       alert('user '+username+' added '+hashed);
-       this.addUser(username,hashed);
-      }
+      if(u.username==username){x=true;}
+    return x; 
+  });
+
+  if(userExists===true){alert('error: user already exists');}
+  if(password!=repassword){alert("passwords are not identical");}
+  if(userExists&&(password==repassword))
+    {let hashed=crypto.SHA256(password).toString(crypto.enc.Hex);
+      alert('user '+username+' added '+hashed);
+      this.addUser(username,hashed);
+    }
+
     this.form='none';  
   }
 
   checkLogin(username,password){
-   
-   let userExists=this.login.reduce(function(x=false,u){
-                                        if(u.username==username){x=true;}
-                                        return x; 
-                                       }); 
+    let userExists=this.login.reduce(function(x=false,u){
+      if(u.username==username){x=true;}
+    return x; 
+  });
+    
    let hashed=crypto.SHA256(password).toString(crypto.enc.Hex);
    let userPassword=this.login.reduce(function(x="none",u){if((u.username==username)&&(u.password==hashed))
                                                             {x=u.password;}

@@ -1,4 +1,11 @@
+/************************************
+    FOOTER CSS
+*************************************/
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900%27');
+
+/************************************
+    GENERAL STYLES
+*************************************/
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -7,6 +14,14 @@ footer {
     background-color: #2E74B5;
     padding: 30px 0px;
 }
+
+img {
+    height: 3em;
+}
+
+/************************************
+    CLASSES
+*************************************/
 
 .logo {
     color: #FFF;
@@ -55,9 +70,7 @@ footer {
     font-size: 18px;
 }
 
-img {
-    height: 3em;
-}
+
 
 .white,
 .white > a {

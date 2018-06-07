@@ -1,3 +1,7 @@
+/************************************
+	BOOKING CSS
+*************************************/
+
 .card {
     padding: 20px;
 }
@@ -8,5 +12,10 @@
 
 .alert {
     width: 20em;
+}
+
+.a-c {
+	text-align: center;
+	margin-top: 20px;
 }
 

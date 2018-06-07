@@ -11,7 +11,7 @@
 					<a class="nav-link" routerLink = "/why">Wieso BIM-Factory</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" routerLink = "/courses">Kurse</a>
+					<a class="nav-link" routerLink= "/courses">Kurse</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" routerLink = "/team">Team</a>
@@ -19,7 +19,16 @@
 			</ul>
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" routerLink = "/login"><i class="fas fa-sign-in-alt"></i> Login</a>
+						<!-- is only displayed if user is loged in -->
+
+						<a *ngIf="checkForm()" class="nav-link" routerLink = "/interface"><i class="fas fa-user"></i> {{loginUser}} 's</a>
+
+						<!-- is only displayed if user is loged out -->
+						<a *ngIf="!checkForm()" class="nav-link" routerLink = "/login" ><i class="fas fa-sign-in-alt"></i> Login</a>	
+				</li>	
+				<li>
+						<!-- is only displayed if user is loged in -->
+						<a *ngIf="checkForm()" class="nav-link" routerLink = "/" (click)="logOut()" ><i class="fas fa-sign-out-alt"></i> Logout</a>
 				</li>
 			</ul>
 		</div>

@@ -1,3 +1,10 @@
+/************************************
+    LOGIN COMPONENT
+*************************************/
+
+/************************************
+    CLASSES 
+*************************************/
 .selection {
 	padding: 100px 0;
 	text-align: center;
@@ -11,6 +18,9 @@
 	margin-top: 30px;
 }
 
+/************************************
+    BUTTONS 
+*************************************/
 .inputBtn {
     -moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
     -webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
