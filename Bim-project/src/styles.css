@@ -42,3 +42,9 @@
     top:1px;
 }
 
+#logindata,
+#bookdata {
+    display: none;
+}
+
+

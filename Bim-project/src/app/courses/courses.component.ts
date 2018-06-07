@@ -1,5 +1,8 @@
 import { Component} from '@angular/core';
 
+/*
+  IMPORTING FIREBASE
+*/
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule} from 'angularfire2/database';
 
@@ -12,6 +15,7 @@ import * as firebase from 'firebase/app';
 import { FirebaseService } from '../services/firebase.services';
 import { OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
@@ -20,6 +24,9 @@ import { OnInit } from '@angular/core';
 })
 
 export class CoursesComponent implements OnInit {
+  /*
+    VARIABLES
+  */
   courses: Courses[];
   appState: string;
   username: string;
@@ -27,15 +34,19 @@ export class CoursesComponent implements OnInit {
   show: string[];
   showIt: boolean;
 
-    constructor(private _firebaseService: FirebaseService) {
+  /*
+    CONSTRUCTOR
+  */
+  constructor(private _firebaseService: FirebaseService) {
   }
 
   ngOnInit() {
     this.appState = 'default';
   
-      this._firebaseService.getCourses().subscribe(courses => {
-        this.courses = courses;
-      });
+    this._firebaseService.getCourses().subscribe(courses => {
+      this.courses = courses;
+    });
+
     let logindata=this.getLogin();
     this.username=logindata.username;
     this.login=logindata.login;
@@ -51,21 +62,20 @@ export class CoursesComponent implements OnInit {
   }
 
   bookCourse(courseId){
-   
-   if(this.login==false)
-    {alert('please login first');}
-   else
-    {this.showIt=true;
-     let Id=courseId.toString();
-     let data={"username": this.username, "login": this.login, "courseId": Id};
-     document.getElementById('logindata').textContent = JSON.stringify(data);
-   }
-
+    if(this.login==false)
+      {alert('please login first');}
+    else
+      {this.showIt=true;
+      let Id=courseId.toString();
+      let data={"username": this.username, "login": this.login, "courseId": Id};
+      document.getElementById('logindata').textContent = JSON.stringify(data);
+    }
   }
-
-
 }
 
+  /*
+    INTERFACE
+  */
 export interface Courses {
   $key?: string;
   about?: string;

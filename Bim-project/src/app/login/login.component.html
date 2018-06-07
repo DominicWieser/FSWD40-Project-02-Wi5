@@ -1,20 +1,21 @@
+<!-- RESPONSIVENESS -->
 <div class="container">
 	<div class="row abstand">
+		<!-- REGISTER + LOGIN INFORMATION -->
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div>
 				<h4>Du bist neu?</h4>
 				<h5>Dann registriere dich!</h5>
 				<button class="inputBtn" (click)="registerForm()">Register</button>
-
 				<h4 class="fix">Dich habe ich schonmal gesehen?!</h4>
 				<h5>Dann log dich ein und bleibe uns treu!</h5>
 				<button class="inputBtn" (click)="loginForm()">Login</button>
 			</div>
 		</div>
+		<!-- REGISTER + LOGIN FORM -->
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div *ngIf="form == 'register'" id="registering">
 				<h2>Register</h2>
-
 				<p><input class="form-control" type="text" placeholder="username" #regUserName/></p>
 				<p><input class="form-control" type="password" placeholder="password" #regPassword/></p>
 				<input class="form-control" type="text" placeholder="retype password" #regRePassword/>
@@ -24,10 +25,10 @@
 				
 			<div *ngIf="form == 'login'" id="logintemplate">
 				<h2>Login </h2>	
-					<p><input class="form-control" type="text" placeholder="username" #logUserName/></p>
-					<p><input class="form-control" type="password" placeholder="password" #logPassword/></p>
-					<p><a routerLink="/courses" class="inputBtn" (click)="checkLogin(logUserName.value,logPassword.value)">submit</a></p>
-					<a href="#" onclick="alert('your password has been send to you by e-mail');">forgot password </a>	
+				<p><input class="form-control" type="text" placeholder="username" #logUserName/></p>
+				<p><input class="form-control" type="password" placeholder="password" #logPassword/></p>
+				<p><a routerLink="/courses" class="inputBtn" (click)="checkLogin(logUserName.value,logPassword.value)">submit</a></p>
+				<a href="#" onclick="alert('your password has been send to you by e-mail');">forgot password </a>	
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,298 @@
+body {
+  font-family: "Museo Sans", Ubuntu, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  background: #FFFAFA;
+  font-size: 1.2rem;
+}
+
+/* header WI-5 */
+#fullhead {
+  padding-top: 10rem;
+  padding-bottom: 18rem;
+  background-image: url(../img/header.jpg);
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover
+}
+
+/* hr from header */
+.opening {
+  border-top: 10px solid #fff;
+  width: 58px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+/* skill section intro */
+#skillsint,
+#conv {
+  background-color: #D16038;
+}
+
+/* other hr's */
+.line {
+  border-top: 10px solid #333;
+  width: 58px;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+
+section {
+  padding: 8rem 0
+}
+
+.section-heading {
+  margin-top: 0
+}
+
+
+@media (min-width:992px) {
+  #mainNav {
+    border-color: transparent;
+    background-color: transparent
+  }
+  #mainNav .navbar-brand {
+    color: rgba(255, 255, 255, .7)
+  }
+  #mainNav .navbar-brand:focus,
+  #mainNav .navbar-brand:hover {
+    color: #fff
+  }
+  #mainNav .navbar-nav>li.nav-item>a.nav-link {
+    padding: .5rem 1rem
+  }
+  #mainNav .navbar-nav>li.nav-item>a.nav-link,
+  #mainNav .navbar-nav>li.nav-item>a.nav-link:focus {
+    color: rgba(255, 255, 255, .7)
+  }
+  #mainNav .navbar-nav>li.nav-item>a.nav-link:focus:hover,
+  #mainNav .navbar-nav>li.nav-item>a.nav-link:hover {
+    color: #fff
+  }
+  #mainNav.navbar-shrink {
+    border-bottom: 1px solid rgba(33, 37, 41, .1);
+    background-color: #fff
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    color: #f05f40
+  }
+  #mainNav.navbar-shrink .navbar-brand:focus,
+  #mainNav.navbar-shrink .navbar-brand:hover {
+    color: #f05f40
+  }
+  #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link,
+  #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus {
+    color: #212529
+  }
+  #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:focus:hover,
+  #mainNav.navbar-shrink .navbar-nav>li.nav-item>a.nav-link:hover {
+    color: #f05f40
+  }
+}
+
+
+
+.service-box {
+  max-width: 400px;
+}
+
+/* Buttons */
+.btn-outline-primary {
+  color: black;
+  background-color: #e2e6ea;
+  border: none;
+  border-radius: 300px;
+  text-transform: uppercase;
+  font-weight: 650;
+  margin-top: 5px;
+  padding: 1rem 2rem;
+}
+
+.btn-outline-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #ee4b28;
+}
+
+.btn-primary:active,
+.btn-primary:focus {
+  box-shadow: 0 0 0 .2rem rgba(240, 95, 64, .5);
+}
+
+/* included from Bootstrap */
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+
+/* typewriter effect */
+.css-typing p {
+  border-right: .15em solid black;
+  font-family: "Courier";
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+}
+
+.css-typing p:nth-child(1) {
+  width: 40ch;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+  width: 68ch;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  width: 70ch;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(4) {
+  width: 72ch;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(5) {
+  width: 56ch;
+  opacity: 0;
+  -webkit-animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+      width: 0;
+  }
+  99.9% {
+      border-right: .15em solid black;
+  }
+  100% {
+      border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+      width: 0;
+  }
+  99.9% {
+      border-right: .15em solid black;
+  }
+  100% {
+      border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+      width: 0;
+  }
+  1% {
+      opacity: 1;
+  }
+  99.9% {
+      border-right: .15em solid black;
+  }
+  100% {
+      opacity: 1;
+      border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+      width: 0;
+  }
+  1% {
+      opacity: 1;
+  }
+  99.9% {
+      border-right: .15em solid black;
+  }
+  100% {
+      opacity: 1;
+      border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+      width: 0;
+  }
+  1% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+      width: 0;
+  }
+  1% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+@-webkit-keyframes blink {
+  50% {
+      border-color: tranparent;
+  }
+}
+
+
+/* our contact information section */
+#contact {
+  margin: 20px 0;
+}
+
+/* ..Github and E-Mail anchor */
+.fa {
+  color: #333;
+}
+
+.fa:hover {
+  color: #D16038;
+}

@@ -1,7 +1,78 @@
+
 <div class="container-fluid">
     <div class="row card col-lg-12">
-        <p class="mx-auto alert alert-success">Vielen Dank für deine Buchung! USERNAME</p>
-        <img class="mx-auto" src="https://i.imgur.com/bl5W6ll.jpg" alt="welcomeSign">
-        
+
+        <div class="text-center">
+			
+            <h3>Willkommen {{username}}!</h3>
+        </div>
+        <div class="row">
+            <div class="card bgWall col-lg-4">
+                <h3>Deine Daten</h3>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th><b>Vorname</b></th>
+                            <td class="text-left">{{name}}</td>
+                        </tr>
+                        <tr>
+                            <th><b>Nachname</b></th>
+                            <td class="text-left">{{surname}}</td>
+                        </tr>
+                        <tr>
+                            <th><b>Adresse</b></th>
+                            <td class="text-left">{{address}}</td>
+                        </tr>
+                        <tr>
+                            <th><b>Anmerkung</b></th>
+                            <td class="text-left">{{comment}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card col-lg-8">
+                <h3>Dein gebuchter Kurs:</h3>
+                <div class="row">
+                     <table class="table bgWall col-lg-8 col-md-8">
+                        <tbody>
+                            <tr>
+                                <th><b>Info</b></th>
+                                <td class="text-left">{{courses[courseId].about}}</td>
+                            </tr>
+                            <tr>
+                                <th><b>Beginn</b></th>
+                                <td class="text-left">{{courses[courseId].start}}</td>
+                            </tr>
+                            <tr>
+                                <th><b>Fundament</b></th>
+                                <td class="text-left">{{courses[courseId].requirements}}</td>
+                            </tr>
+                            <tr>
+                                <th><b>Dauer</b></th>
+                                <td class="text-left">{{courses[courseId].duration}} Wochen</td>
+                            </tr>
+                            <tr>
+                                <th><b>Zukunft</b></th>
+                                <td class="text-left">{{courses[courseId].jobProspects}}</td>
+                            </tr>
+                            <tr>
+                                <th><b>Kosten</b></th>
+                                <td class="text-left">{{courses[courseId].price}} &euro; inkl. USt.</td>
+                            </tr>
+
+                        </tbody>
+                     </table>
+                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <img class="coursePic mx-auto d-block img-fluid" src="{{courses[courseId].picture}}" alt="pic">
+                     </div>
+                </div>
+               
+            </div>
+        </div>
+        <!--<div>
+             <p class="mx-auto alert alert-success">Erfolgreich eingeloggt</p> 
+            <img class="mx-auto" src="https://i.imgur.com/bl5W6ll.jpg" alt="welcomeSign">
+        </div>-->
     </div>
 </div>

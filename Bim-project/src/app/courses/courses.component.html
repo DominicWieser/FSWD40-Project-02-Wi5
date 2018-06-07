@@ -1,6 +1,8 @@
+<!-- FULL WIDTH CONTAINER - COURSES COMPONENT -->
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-lg-12">
+			<!-- DISPLAY COURSES FROM FIREBASE -->
 			<div class="card" *ngFor="let courses of courses;  let ii = index;">
 		        <h2>{{courses.courseName}}</h2>
 		        <img class="mx-auto d-block img-fluid" src="{{courses.picture}}" alt="pic">
@@ -33,9 +35,9 @@
 		                </tr>
 		                <tr>
 		                	<th>&nbsp;</th>
-		                	<!-- DISPLAYED WHILE NOT LOGGED IN -->
+		                	<!-- DISPLAYED WHILE NOT LOGGED IN + LINK TO LOGIN COMPONENT -->
 		                	<td><a routerLink = "/login" *ngIf="!login" class="inputBtn">Kurs buchen</a>
-		                	<!-- DISPLAYED WHILE LOGGED IN -->
+		                	<!-- DISPLAYED WHILE LOGGED IN + LINK TO BOOKING COMPONENT-->
 		                	<a routerLink = "/booking" *ngIf="login" class="inputBtn" (click)="bookCourse([ii])">Kurs wirklich buchen</a></td>
 		                </tr>	
 		            </tbody>
