@@ -1,31 +1,41 @@
+<div class="container-fluid">
+    <div class="row card col-lg-12 mx-auto">
+        <h3>Kursbuchung</h3>
+        <div class="alert alert-success" role="alert">
+            <p class="h5">Kurs ID: {{ii}}</p>
+            <p class="h5">Username: {{username}}</p>
+            <p class="h5">Preis: {{price}}</p>
+        </div>
+        <!-- connected to the "Kurs buchen"-button -->
 
-<div>
-    <h3>Course Booking</h3>
-    <p>Course Id: {{ii}}</p>
-    <p>Username: {{username}}</p>
- 
-    
-</div ><!-- connected to the "Kurs buchen"-button -->
+        <form>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Vorname</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Fritz">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Nachname</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Mustermann">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Adresse</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Musterstraße 1, 1234 Musterhausen">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Anmerkung</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
 
 
-<form>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Vorname</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Fritz">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Nachname</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Mustermann">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Adresse</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Entenhausen">
-  </div>
+            <div class="form-group">
+                <label>
+          <input type="checkbox" name="agb" value="agbCheck" id="check1"> Die angezeigten Daten und Eingaben habe ich sorgfältig überprüft und beauftrage Sie, mit der Durchführung einer verbindlichen Buchung.</label>
+            </div>
 
+            <button class="inputBtn"><i class="fab fa-telegram-plane"></i>&ensp;Kurs kostenpflichtig buchen</button>
 
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Anmerkung</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-  <button>submit</button>
-</form>
+        </form>
+    </div>
+</div>
